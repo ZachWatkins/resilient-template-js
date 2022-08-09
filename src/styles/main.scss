@@ -1,0 +1,10 @@
+$black: #000;
+$white: #FFF;
+body {
+    background: $black;
+    color: $white;
+    &::before {
+        content: "hello";
+        transform: rotate(90deg);
+    }
+}
