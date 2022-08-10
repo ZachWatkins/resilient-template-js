@@ -1,11 +1,11 @@
-import './styles/main.scss';
-import logo from './assets/babel.svg';
+import "./styles/main.scss";
+import logo from "./assets/babel.svg";
 
 // Load an image on the home page.
-const logoImg = document.getElementById('logoImg');
+const logoImg = document.getElementById("logoImg");
 logoImg.src = logo;
-var a = {
-    name: 'Harrison'
+const a = {
+    name: "Harrison",
 };
 console.log(a);
 

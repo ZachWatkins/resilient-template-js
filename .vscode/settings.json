@@ -1,0 +1,18 @@
+{
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+	"editor.wordWrapColumn": 100,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+	},
+	"eslint.format.enable": true,
+	"eslint.nodeEnv": "production",
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact"
+	],
+	"eslint.run": "onSave",
+}

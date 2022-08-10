@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es2021": true,
+    "es2015": true,
+    "es6": true
+  },
+  "rules": {
+    "no-console": "off",
+    // we want to force semicolons
+    "semi": [
+      "error",
+      "always"
+    ],
+    // we want to avoid extraneous spaces
+    "no-multi-spaces": [
+      "error"
+    ],
+    "eqeqeq": "error",
+    "prettier/prettier": "error"
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "build",
+    "dist",
+    "public"
+  ]
+}

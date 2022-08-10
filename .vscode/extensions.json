@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "webben.browserslist",
+        "wix.vscode-import-cost",
+        "syler.sass-indented"
+    ]
+}
