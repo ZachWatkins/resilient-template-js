@@ -1,8 +1,14 @@
 {
-    "recommendations": [
-        "dbaeumer.vscode-eslint",
-        "webben.browserslist",
-        "wix.vscode-import-cost",
-        "syler.sass-indented"
-    ]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "webben.browserslist",
+    "wix.vscode-import-cost",
+    "syler.sass-indented",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "eamodio.gitlens",
+    "neilbrayfield.php-docblocker",
+    "bmewburn.vscode-intelephense-client",
+    "emallin.phpunit"
+  ]
 }

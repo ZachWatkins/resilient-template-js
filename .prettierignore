@@ -1,0 +1,36 @@
+## [START] From .gitignore
+# Dependencies
+node_modules/
+
+# Production
+public/
+dist/
+out/
+
+# Generated files
+.docusaurus/
+test/output-*/
+.dev_profile*
+
+# IDE Artifacts
+.vscode
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+*.log*
+## [END] From .gitignore
+
+# Prettier-only ignores.
+assets/
+dist/
+CHANGELOG.md
+package-lock.json
+package.json
+test/assets/
+vendor/
+docs/

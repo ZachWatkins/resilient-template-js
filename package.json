@@ -1,64 +1,84 @@
 {
-  "name": "javascript-examples",
-  "version": "1.0.0",
-  "description": "Patterns for JavaScript",
-  "private": true,
-  "scripts": {
-    "start": "",
-    "babel": "npx babel src --out-dir lib",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "watch": "npm run build-dev -- --watch",
-    "build-dev": "webpack --mode=development",
-    "dev": "webpack serve --mode=development"
-  },
-  "keywords": [
-    "example",
-    "template",
-    "javascript"
-  ],
-  "author": "Zachary Kendall Watkins <watkinza@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
-    "autoprefixer": "^10.4.8",
-    "babel-loader": "^8.2.5",
-    "css-loader": "^6.7.1",
-    "eslint": "^8.21.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.4",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.0.0",
-    "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "mini-css-extract-plugin": "^2.6.1",
-    "postcss": "^8.4.16",
-    "postcss-loader": "^7.0.1",
-    "sass": "^1.54.3",
-    "sass-loader": "^13.0.2",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.74.0",
-    "webpack-bundle-analyzer": "^4.5.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3"
-  },
-  "dependencies": {
-    "core-js": "^3.24.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "javascript-examples",
+    "version": "1.0.0",
+    "description": "Patterns for JavaScript",
+    "private": true,
+    "engines": {
+        "node": "16.10"
+    },
+    "scripts": {
+        "start": "",
+        "build": "webpack",
+        "build:dev": "webpack --mode=development",
+        "watch": "npm run build-dev -- --watch",
+        "serve": "webpack serve --mode=development",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix",
+        "doc": "node_modules/.bin/jsdoc -d guides src/*.js"
+    },
+    "keywords": [
+        "example",
+        "template",
+        "javascript"
+    ],
+    "author": "Zachary Kendall Watkins <watkinza@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/cli": "^7.18.10",
+        "@babel/core": "^7.18.10",
+        "@babel/eslint-parser": "^7.18.9",
+        "@babel/preset-env": "^7.18.10",
+        "babel-loader": "^8.2.5",
+        "css-loader": "^6.7.1",
+        "css-minimizer-webpack-plugin": "^4.0.0",
+        "eslint": "^8.21.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-plugin-html": "^7.1.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsdoc": "^39.3.6",
+        "eslint-plugin-n": "^15.2.4",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-promise": "^6.0.0",
+        "gh-pages": "^4.0.0",
+        "html-webpack-plugin": "^5.5.0",
+        "husky": "^8.0.1",
+        "jsdoc": "^3.6.11",
+        "lint-staged": "^13.0.3",
+        "mini-css-extract-plugin": "^2.6.1",
+        "postcss": "^8.4.16",
+        "postcss-loader": "^7.0.1",
+        "postcss-preset-env": "^7.7.2",
+        "sass": "^1.54.3",
+        "sass-loader": "^13.0.2",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.74.0",
+        "webpack-bundle-analyzer": "^4.5.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.9.3"
+    },
+    "dependencies": {
+        "core-js": "^3.24.1",
+        "puppeteer": "^16.1.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.js": [
+            "prettier --write",
+            "eslint"
+        ],
+        "**/*.scss": [
+            "prettier --write",
+            "stylelint --report-needless-disables --report-invalid-scope-disables --allow-empty-input",
+            "git add"
+        ],
+        "!(*sass).md": [
+            "prettier --write",
+            "git add"
+        ]
     }
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
-  }
 }
