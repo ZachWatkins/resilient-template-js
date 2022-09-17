@@ -1,13 +1,14 @@
 {
-    "name": "javascript-examples",
-    "version": "1.0.0",
+    "name": "resilient-frontend-template",
+    "version": "0.1.0",
     "description": "Patterns for JavaScript",
     "private": true,
     "engines": {
         "node": "16.10"
     },
     "scripts": {
-        "start": "",
+        "getcert": "echo foobar | node bin/devcert.js",
+        "ghpages": "gh-pages -d dist",
         "build": "webpack",
         "build:dev": "webpack --mode=development",
         "watch": "npm run build-dev -- --watch",
@@ -19,7 +20,7 @@
     "keywords": [
         "example",
         "template",
-        "javascript"
+        "web"
     ],
     "author": "Zachary Kendall Watkins <watkinza@gmail.com>",
     "license": "MIT",
@@ -55,7 +56,9 @@
         "webpack": "^5.74.0",
         "webpack-bundle-analyzer": "^4.5.0",
         "webpack-cli": "^4.10.0",
-        "webpack-dev-server": "^4.9.3"
+        "webpack-dev-server": "^4.9.3",
+        "devcert": "^1.2.2",
+        "http-server": "^14.1.1"
     },
     "dependencies": {
         "core-js": "^3.24.1",

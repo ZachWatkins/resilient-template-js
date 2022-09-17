@@ -1,4 +1,6 @@
 const path = require('path');
+const PACKAGE = require('./package.json');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { webpack } = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -52,6 +54,7 @@ var config = {
         hot: true,
         compress: true,
         historyApiFallback: true,
+        https: true,
     },
     module: {
         rules: [
@@ -112,9 +115,11 @@ var config = {
     },
 };
 
-module.exports = function (env, argv) {
-    if (argv.mode === 'development') {
-        config.devtool = 'source-map';
+module.exports = (env, argv) => {
+    if (argv.mode !== 'development') {
+        return config;
     }
+    config.devtool = 'source-map';
+    config.devServer.https = true;
     return config;
 };

@@ -1,0 +1,11 @@
+*.git*
+./*.txt
+bin
+*.yml
+*-local.*
+*.xml
+tests
+.env.*
+.editorconfig
+.gitattributes
+*.md

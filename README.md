@@ -1,5 +1,8 @@
-# JavaScript Examples
+# A project template for building resilient serverless websites and applications.
 
+## Setup
+
+To generate the certificates run `node bin/devcert.js`
 ## Build Tools
 
 This package uses:
